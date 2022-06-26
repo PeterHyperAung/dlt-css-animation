@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 1</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 500px;
+            background-color: #f4f4f4;
+        }
+
+        .house {
+            width: 250px;
+            height: 100px;
+            /* background-color: #e5e5e5; */
+            background: linear-gradient(black, silver);
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.7);
+            border: 1px solid black;
+            /* perspective: 600px; */
+            padding: 10px;
+            margin: auto;
+            position: relative;
+            perspective: 600px;
+            perspective-origin: top;
+        }
+
+        .roof {
+            width: 200px;
+            height: 85px;
+            /* background-color: #e5e5e5; */
+            background: linear-gradient(black, silver);
+            box-shadow: -5px 0 10px rgba(0, 0, 0, 0.7);
+            border: 1px solid black;
+            transform: rotateX(45deg);
+            padding: 50px;
+            position: absolute;
+            left: -20px;
+            top: -100%;
+            z-index: 1;
+        }
+
+        .door1,
+        .door2 {
+            width: 62px;
+            height: 100px;
+            position: absolute;
+            bottom: 0;
+            background-color: silver;
+            border: 1px solid black;
+        }
+
+        .door1 {
+            left: 74px;
+            transform-origin: left;
+            transition: transform 0.7s ease-out;
+        }
+
+        .door2 {
+            left: 51%;
+            transform-origin: right;
+            transform: rotateY(45deg);
+            transition: transform 0.7s ease-out;
+        }
+
+        .door1:hover {
+            transform: rotateY(-45deg);
+        }
+
+        .door2:hover {
+            transform: rotateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="house">
+            <div class="roof"></div>
+            <div class="door1"></div>
+            <div class="door2"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
