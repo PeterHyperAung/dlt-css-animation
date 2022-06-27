@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Effect</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            background: linear-gradient(200deg, pink, skyblue);
+            font-size: 35px;
+            border: none;
+            padding: 20px;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
+        .btn::after {
+            content: "10% OFF";
+            display: inline-block;
+            font-size: 16px;
+            background-color: orange;
+            position: absolute;
+            padding: 5px;
+            margin-left: -55px;
+            margin-top: -30px;
+            transition: all .3s ease-out;
+        }
+
+        .btn:hover::after {
+            background-color: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn">Add to cart</button>
+</body>
+
+</html>
